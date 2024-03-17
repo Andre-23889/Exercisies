@@ -30,8 +30,9 @@ tr:nth-child(even){
  text-align: right;
 }
 
-tfoot{
+tfoot td{
    font-weight: 800;
+   background-color: #78909c;
 }
 
 tr>td+td{
@@ -40,7 +41,7 @@ tr>td+td{
 }
 
 
-td[data_numeric]
+td:nth-child(3)
 {
-   background-color: green;
+   color: #7f0000;
 }
