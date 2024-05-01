@@ -1,1 +1,0 @@
-per rendere il caricamento più legegro carco solo la cartella src, da sostituire all'omonima cartella che viene creata in un nuova applicazione  con npm vite.
