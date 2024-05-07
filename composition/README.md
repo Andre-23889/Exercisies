@@ -1,0 +1,1 @@
+per  avere la sicurezza di aver capito il funzionamento ho aggiunto un secondo componente, che passa un'immagine al componente Container
