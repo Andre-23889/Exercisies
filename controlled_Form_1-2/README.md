@@ -1,1 +1,0 @@
-il file index.html e la cartella src sono da sostituire alle omonime del template default di vite

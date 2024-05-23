@@ -1,7 +1,0 @@
-.welcome{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:rgb(215, 215, 215);
-    border: 3px outset rgb(128, 128, 128);
-}
