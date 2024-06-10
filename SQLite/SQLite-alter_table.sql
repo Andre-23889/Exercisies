@@ -1,0 +1,3 @@
+ALTER TABLE books ADD COLUMN  publisher VARCHAR(20) ;
+
+ALTER TABLE books ADD COLUMN pages INT(20)
