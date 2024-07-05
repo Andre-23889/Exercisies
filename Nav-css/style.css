@@ -1,9 +1,13 @@
+body{
+     margin:0px;
+}
+
 .navbar{
     display: flex;
     flex-wrap: nowrap;
     top: 0px;
     left:50%;
-    width: 95vw;
+    width: 98vw;
     height: 7%;
     align-items: center;
     justify-content: space-between;
@@ -71,4 +75,9 @@
     border: 2px solid #017d2d;
 }
 
+#search-button:hover{
+    background-color:#017d2d;
+    color: whitesmoke;
+    border: 2px solid #017d2d;
+}
 
