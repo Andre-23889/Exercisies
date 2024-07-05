@@ -1,27 +1,36 @@
 /* HO MODIFICAT LE DIMENSION, ALTRIMENTO CON IL MIO BROWSER NON RIUSCIVO A VERIFICARE L'ESERCIZIO */
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.4rem
+}
 
 @media screen and (min-width: 900px) {
     .page{
         display:grid;
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, minmax(min-content, max-content)); 
         grid-template-rows: auto;
         width: 94%;
-        padding: 3%;
-        margin: 3%;
-        min-width:min-content;
+        margin: 2rem;
+        justify-content: center;
+        gap: 1.3rem;
     }
 }
+
 
 @media screen and (max-width: 900px/* 768px */) {
     .page{
         display:grid;
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, minmax(min-content, max-content)); 
         grid-template-rows: auto;
         width: 94%;
         padding: 3%;
         margin: 3%;
         min-width:min-content;
+        justify-content: center;
+        gap: 1.6vw;
     }
 }
 
@@ -29,27 +38,36 @@
 
     .page{
         display:grid;
-        grid-template-columns: repeat(1, 1fr); 
+        grid-template-columns: repeat(1, minmax(min-content, max-content)); 
         grid-template-rows: auto;
         width: 94%;
         padding: 3%;
         margin: 3%;
         min-width:min-content;
+        justify-content: center;
+        gap: 1.6vw;
     }
 }
 
 
-.post{
+.post-image{
     display:flex;
     grid-column: auto;
     grid-row: auto;
-    width:min-content;
-    max-width: 200%;
-    margin: 3vw;
+    width:98%;
+    max-width: min-content;
+    zoom: 30vw;
     border-radius: 23px;
     overflow:hidden;
     box-shadow: 1px 5px 7px rgb(86, 86, 86);
 }
+
+
+
+
+
+
+
 
 
 
