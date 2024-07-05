@@ -1,0 +1,48 @@
+import express from "express"
+import 'express-async-errors'
+import morgan from "morgan"
+import 'dotenv/config'
+import {
+    seePlanets,
+    searchPlanet,
+    newPlanet,
+    renamePlanet,
+    destroyPlanet,
+    addImage,
+} from "./controllers/planets.js"
+import {login, signup, logout} from "./controllers/users.js"
+import {authorize} from "./authorize.js"
+import multer from 'multer'
+import "./passport.js"
+
+const storage= multer.diskStorage({
+    destination: (req, file, cb)=> {cb(null, "./uploads")},
+    filename: (req, file, cb)=> {cb(null, file.originalname)}
+})
+const upload= multer({ storage })
+
+const server= express()
+const port= 3000
+
+server.use(morgan("dev"))
+server.use(express.json())
+
+server.get('/api/planets', seePlanets);
+
+server.get('/api/planets/:id', searchPlanet);
+
+server.post('/api/planets', newPlanet);
+
+server.put('/api/planets/:id', renamePlanet);
+
+server.delete('/api/planets/:id', destroyPlanet);
+
+server.post('/api/planets/:id/image',upload.single("image"), addImage)
+
+server.post('/api/users/login', login);
+server.post('/api/users/signup', signup);
+server.get('/api/users/logout', authorize, logout);
+
+server.listen(port, ()=>{
+    console.log(`server listening on port http://localhost:${port}`)
+});
